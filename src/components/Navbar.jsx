@@ -8,14 +8,13 @@ function Navbar() {
     const location = useLocation()
     const matchRoute = (route) => {
         if (route === location.pathname) {
-            console.log(route)
             return true
         }
         return false
     }
   return (
-    <footer className='bg-white shadow-2xl'>
-        <nav className='flex items-center pb-2 justify-around'>
+    <footer className='bg-white '>
+        <nav className='flex items-center py-1 md:py-2 justify-around'>
             <Link to="/" className="flex flex-col justify-center items-center gap-1">
                 <ExploreIcon fill={matchRoute("/") ? '#2c2c2c' : '#8f8f8f'} width="36px" height="36px"/>
                 <p className={`text-xs ${matchRoute("/") ? 'font-bold' : 'font-normal'}`}>Explore</p>
