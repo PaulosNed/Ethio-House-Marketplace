@@ -34,8 +34,8 @@ function Offers() {
     <p className='text-4xl font-extrabold mb-8'>Offers</p>
     {loading ? <h3> Loading...</h3> : listings.length === 0 ? <h3>No Offers Found</h3> : (
       <div>
-          <div className='w-full flex flex-col gap-3'>
-              {listings.map((item) => <CatagoryItems key={item.id} data={item.data}/> )}
+          <div className='w-full flex flex-col gap-5'>
+              {listings.map((item) => <CatagoryItems key={item.id} data={item.data} id={item.id}/> )}
           </div>
       </div>)}
    </div> 

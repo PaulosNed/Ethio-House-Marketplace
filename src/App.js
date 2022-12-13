@@ -10,12 +10,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from "./components/PrivateRoute";
 import Catagories from "./pages/Catagories";
+import CreateListing from "./pages/CreateListing";
 function App() {
   return (
     <>
     <BrowserRouter>
       <div className="min-h-screen flex flex-col bg-zinc-100">  
-        <main className="flex-auto mx-5 my-7">
+        <main className="flex-auto mx-5 my-7 mb-24">
           <Routes>
             <Route path="/" element={<Explore />}/>
             <Route path="/offers" element={<Offers />} />
@@ -24,11 +25,12 @@ function App() {
             </Route>
             <Route path="/signin" element={<Signin />}/>
             <Route path="/signup" element={<Signup />}/>
+            <Route path="/createListing" element={<CreateListing />}/>
             <Route path="/forgotPassword" element={<ForgotPassword />}/>
             <Route path="catagories/:catagoryName" element={<Catagories />}/>
           </Routes>
         </main>
-        <div className="">
+        <div className="fixed w-full z-20 bottom-0">
           <Navbar />
         </div>
       </div>
