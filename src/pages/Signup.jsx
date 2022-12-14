@@ -44,7 +44,7 @@ function SignUp() {
       navigate('/')
 
     } catch (error) {
-      toast.errot("bad user credential")
+      toast.error("bad user credential")
     }
   }
 
