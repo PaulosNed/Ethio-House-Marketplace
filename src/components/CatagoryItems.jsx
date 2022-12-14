@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function CatagoryItems({data, id}) {
   const navigate = useNavigate()
   return (
-    <div className='flex items-center gap-3 cursor-pointer' onClick={() => navigate("/")}>
+    <div className='flex items-center gap-3 cursor-pointer' onClick={() => navigate(`/catagories/${data.type}/${id}`)}>
       <img src={data.imageUrls[0]} alt="house-img" className='w-44 h-36 rounded-3xl'/>
       <div>
         <p className='text-xs'>{data.location}</p>

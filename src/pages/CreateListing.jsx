@@ -111,7 +111,7 @@ function CreateListing() {
   return loading ? <h1>Loading...</h1> : (
     <div className='mx-6 max-w-lg'>
         <h1 className='text-4xl font-extrabold'>Create a Listing</h1>
-        <form className='mt-8 flex flex-col gap-5' onSubmit={handleSubmit}>
+        <form className='mt-8 flex flex-col gap-5 duration-500' onSubmit={handleSubmit}>
             <section>
                 <label className='text-sm font-bold'>Sell/Rent</label>
                 <div className='mt-2 flex gap-2'>
@@ -165,7 +165,7 @@ function CreateListing() {
                     <p className='text-sm font-bold'>{`$ ${formData.type === 'rent' ? " / Month" : ""}`}</p>
                 </section>
             </section>
-            {formData.offer && <section>
+            {formData.offer && <section className='duration-500'>
                 <label className='text-sm font-bold'>Discounted Price</label>
                 <section className='mt-2 flex gap-2 items-center'>
                     <input type="number" id="discountedPrice" className='px-3.5 mt-2 w-20 py-1 rounded-lg' value={formData.discountedPrice} onChange={handleNumber}/>
