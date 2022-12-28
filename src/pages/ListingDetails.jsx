@@ -97,8 +97,8 @@ function ListingDetails() {
                         <label htmlFor="" className='block'>Message</label>
                         <textarea rows="8" className='my-1 w-full md:w-1/2' value={message} onChange={handleChange}></textarea>
                     </div>
-                    <a href={`mailto:${landlord.email}?Subject=${listing.name}&body=${message}`} className='mx-4 mt-7'>
-                        <button className='w-full md:max-w-lg md:mx-auto bg-green-400 text-white py-2 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl duration-200'>Contact Landlord</button>
+                    <a href={`mailto:${landlord.email}?Subject=${listing.name}&body=${message}`} className='w-full mx-4 mt-7'>
+                        <button className='w-52 md:max-w-lg mx-auto bg-green-400 text-white py-2 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl duration-200'>Contact Landlord</button>
                     </a>
                 </div>
             )}
